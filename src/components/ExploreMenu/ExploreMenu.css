@@ -1,0 +1,156 @@
+/* ===================== Base Styles ===================== */
+.exploremenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.exploremenu h1 {
+    color: #262626;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.exploremenutext {
+    max-width: 60%;
+    color: #808080;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.exploremenulist {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    overflow-x: auto; /* Scrollable for smaller screens */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.exploremenulist::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.exploremenulistitem {
+    text-align: center;
+}
+
+.exploremenulistitem img {
+    width: 7.5vw;
+    min-width: 80px;
+    height: 7.5vw;
+    min-height: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exploremenulistitem img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exploremenulistitem p {
+    margin-top: 10px;
+    color: #747474;
+    font-size: max(1.4vw, 16px);
+    cursor: pointer;
+}
+
+.exploremenulistitem img.active {
+    border: 4px solid tomato;
+    padding: 2px;
+}
+
+.exploremenu hr {
+    margin: 10px 0;
+    height: 2px;
+    background-color: #e2e2e2;
+    border: none;
+}
+
+/* ===================== Large Screens (Above 1200px) ===================== */
+@media (min-width: 1200px) {
+    .exploremenu h1 {
+        font-size: 3rem;
+    }
+    .exploremenutext {
+        font-size: 1.2rem;
+    }
+    .exploremenulistitem img {
+        width: 6vw;
+        min-width: 100px;
+        height: 6vw;
+        min-height: 100px;
+    }
+}
+
+/* ===================== Medium Screens (768px to 1200px) ===================== */
+@media (max-width: 1200px) {
+    .exploremenu h1 {
+        font-size: 2.2rem;
+    }
+    .exploremenutext {
+        max-width: 80%;
+        font-size: 1rem;
+    }
+    .exploremenulistitem img {
+        width: 8vw;
+        min-width: 90px;
+        height: 8vw;
+        min-height: 90px;
+    }
+    .exploremenulistitem p {
+        font-size: 14px;
+    }
+}
+
+/* ===================== Tablet Screens (600px to 768px) ===================== */
+@media (max-width: 768px) {
+    .exploremenu h1 {
+        font-size: 2rem;
+    }
+    .exploremenutext {
+        max-width: 90%;
+        font-size: 0.95rem;
+    }
+    .exploremenulist {
+        gap: 15px;
+    }
+    .exploremenulistitem img {
+        width: 10vw;
+        min-width: 70px;
+        height: 10vw;
+        min-height: 70px;
+    }
+    .exploremenulistitem p {
+        font-size: 13px;
+    }
+}
+
+/* ===================== Mobile Screens (Below 600px) ===================== */
+@media (max-width: 600px) {
+    .exploremenu h1 {
+        font-size: 1.8rem;
+    }
+    .exploremenutext {
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+    .exploremenulist {
+        gap: 10px;
+    }
+    .exploremenulistitem img {
+        width: 12vw;
+        min-width: 60px;
+        height: 12vw;
+        min-height: 60px;
+    }
+    .exploremenulistitem p {
+        font-size: 12px;
+    }
+}

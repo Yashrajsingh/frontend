@@ -1,0 +1,120 @@
+.footer {
+    color: #d9d9d9;
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0px;
+    padding-top: 80px;
+    margin-top: 100px;
+}
+
+.footer-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content-left,
+.footer-content-center,
+.footer-content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.footer-content-center li,
+.footer-content-right li {
+    list-style: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #bbb;
+}
+
+.footer-content-right h2,
+.footer-content-center h2 {
+    color: white;
+}
+
+.footer-social-icons img {
+    width: 40px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.footer hr {
+    width: 90%;
+    height: 2px;
+    margin: 20px 0px;
+    background-color: grey;
+    border: none;
+}
+
+.footer-copyright {
+    text-align: center;
+    color: #bbb;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+/* ===================== Medium Screens (750px to 1200px) ===================== */
+@media (max-width: 1200px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr; /* Two columns on medium screens */
+        gap: 40px;
+    }
+
+    .footer-social-icons img {
+        width: 35px;
+    }
+}
+
+/* ===================== Small Screens (Below 750px) ===================== */
+@media (max-width: 750px) {
+    .footer-content {
+        flex-direction: column; /* Stack items vertically */
+        gap: 30px;
+    }
+
+    .footer-content-left,
+    .footer-content-center,
+    .footer-content-right {
+        align-items: center;
+    }
+
+    .footer-social-icons img {
+        width: 30px; /* Smaller social icons */
+        margin-right: 10px;
+    }
+
+    .footer-content-center li,
+    .footer-content-right li {
+        font-size: 0.85rem; /* Smaller font size on mobile */
+    }
+
+    .footer hr {
+        width: 80%; /* Reduce the width of the hr element */
+    }
+}
+
+/* ===================== Very Small Screens (Below 500px) ===================== */
+@media (max-width: 500px) {
+    .footer-social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer-copyright {
+        font-size: 0.8rem;
+    }
+
+    .footer-content {
+        padding: 0 10px;
+    }
+}

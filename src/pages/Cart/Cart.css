@@ -1,0 +1,215 @@
+/* --- General Styles --- */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Cart Items Section --- */
+.cartitems {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.cartitemstitle {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cartitemsitem {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* --- Image Styling with Hover Effect --- */
+.cartitemsitem img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.cartitemsitem img:hover {
+    transform: scale(1.15);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Remove Button Styling --- */
+.cartitemsitem .cross {
+    font-size: 18px;
+    color: tomato;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.cartitemsitem .cross:hover {
+    color: red;
+}
+
+
+.cartbottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start; /* Ensures alignment starts at the top */
+    margin-top: 30px;
+}
+/* --- Cart Total Section --- */
+
+.carttotal {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.carttotal h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.carttotaldetails {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.carttotaldetails b {
+    font-size: 18px;
+    color: #222;
+}
+
+.carttotal button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: tomato;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carttotal button:hover {
+    background-color: #ff6347;
+    transform: scale(1.02);
+    box-shadow: 0px 4px 12px rgba(255, 99, 71, 0.2);
+}
+
+/* --- Promo Code Section --- */
+.cartpromocode {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.cartpromocode p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.cartpromocodeinput {
+    display: flex;
+    gap: 10px;
+}
+
+.cartpromocodeinput input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartpromocodeinput input:focus {
+    border-color: tomato;
+    box-shadow: 0px 0px 5px rgba(255, 99, 71, 0.5);
+}
+
+.cartpromocodeinput button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: tomato;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cartpromocodeinput button:hover {
+    background-color: #ff6347;
+    transform: scale(1.02);
+    box-shadow: 0px 4px 12px rgba(255, 99, 71, 0.2);
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .cartitemstitle,
+    .cartitemsitem {
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        grid-row-gap: 10px;
+    }
+
+    .cartitemstitle p:nth-child(6),
+    .cartitemsitem p:nth-child(6) {
+        display: none;
+    }
+}

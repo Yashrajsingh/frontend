@@ -1,0 +1,63 @@
+.app-download {
+    margin: auto;
+    margin-top: 100px;
+    font-size: max(3vw, 40px);
+    text-align: center;
+    font-weight: 500;
+    padding: 0 10px; /* Added padding for better alignment on small screens */
+}
+
+.app-download-platforms {
+    display: flex;
+    justify-content: center;
+    gap: max(2vw, 10px);
+    margin-top: 40px;
+    flex-wrap: wrap; /* Allow platforms to wrap on small screens */
+    justify-content: center; /* Center items on small screens */
+}
+
+.app-download-platforms img {
+    width: max(30vw, 120px);
+    max-width: 180px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.app-download-platforms img:hover {
+    transform: scale(1.05);
+}
+
+/* ===================== Small Screens (Below 750px) ===================== */
+@media (max-width: 750px) {
+    .app-download {
+        font-size: max(5vw, 25px); /* Adjust font size for smaller screens */
+        margin-top: 60px;
+    }
+
+    .app-download-platforms {
+        gap: 5vw; /* Adjust gap for smaller screens */
+        justify-content: space-evenly; /* Evenly distribute app icons on smaller screens */
+    }
+
+    .app-download-platforms img {
+        width: max(40vw, 100px); /* Scale the app icons smaller on mobile */
+        max-width: 150px;
+    }
+}
+
+/* ===================== Very Small Screens (Below 500px) ===================== */
+@media (max-width: 500px) {
+    .app-download {
+        font-size: max(7vw, 20px); /* Further reduce font size on very small screens */
+        margin-top: 50px;
+    }
+
+    .app-download-platforms {
+        gap: 4vw; /* Adjust gap for better spacing on very small screens */
+    }
+
+    .app-download-platforms img {
+        width: max(50vw, 80px); /* Further reduce size of icons on very small screens */
+        max-width: 120px;
+    }
+}

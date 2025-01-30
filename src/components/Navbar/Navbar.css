@@ -1,0 +1,229 @@
+/* ===================== Base Styles ===================== */
+.navbar {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.navbar .logo {
+    width: 150px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    color: rgb(128, 111, 111);
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-menu .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid rgb(114, 101, 114);
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar-right img {
+    cursor: pointer;
+    width: 24px;
+}
+
+.navbar button {
+    background: transparent;
+    font-size: 16px;
+    color: grey;
+    border: 1px solid tomato;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.navbar button:hover {
+    background: #fff4f2;
+    box-shadow: 0px 2px 8px rgba(255, 99, 71, 0.3);
+}
+
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-height: 10px;
+    min-width: 10px;
+    background-color: tomato;
+    border-radius: 50%;
+    top: -8px;
+    right: -8px;
+}
+
+.navbarprofile {
+    position: relative;
+    cursor: pointer;
+}
+
+.navbarprofiledropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.navbarprofile:hover .navbarprofiledropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 20px;
+    border-radius: 6px;
+    border: 1px solid tomato;
+    list-style: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbarprofiledropdown li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 12px;
+    transition: color 0.3s ease;
+}
+
+.navbarprofiledropdown img {
+    width: 20px;
+}
+
+.navbarprofiledropdown li:hover {
+    color: tomato;
+}
+
+/* ===================== Large Screens (Above 1050px) ===================== */
+@media (min-width: 1050px) {
+    .navbar .logo {
+        width: 150px;
+    }
+    .navbar-menu {
+        gap: 25px;
+        font-size: 18px;
+    }
+    .navbar-right {
+        gap: 30px;
+    }
+    .navbar-right img {
+        width: 24px;
+    }
+    .navbar-right button {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+}
+
+/* ===================== Medium Screens (900px to 1050px) ===================== */
+@media (max-width: 1050px) {
+    .navbar .logo {
+        width: 130px;
+    }
+    .navbar-menu {
+        gap: 20px;
+        font-size: 16px;
+    }
+    .navbar-right {
+        gap: 25px;
+    }
+    .navbar-right img {
+        width: 22px;
+    }
+    .navbar-right button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+/* ===================== Tablet Screens (768px to 900px) ===================== */
+@media (max-width: 900px) {
+    .navbar .logo {
+        width: 120px;
+    }
+    .navbar-menu {
+        gap: 15px;
+        font-size: 15px;
+        flex-wrap: wrap; /* Wrap menu items to fit smaller screens */
+    }
+    .navbar-right {
+        gap: 20px;
+    }
+    .navbar-right img {
+        width: 20px;
+    }
+    .navbar-right button {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+}
+
+/* ===================== Small Screens (600px to 768px) ===================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .navbar-menu {
+        gap: 10px;
+        font-size: 14px;
+        justify-content: center;
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+    .navbar-right {
+        gap: 15px;
+    }
+}
+
+/* ===================== Mobile Screens (Below 600px) ===================== */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .navbar .logo {
+        width: 110px;
+    }
+    .navbar-menu {
+        gap: 8px;
+        font-size: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navbar-right {
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+    .navbar-right img {
+        width: 18px;
+    }
+    .navbar-right button {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+}
